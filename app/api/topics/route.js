@@ -16,8 +16,18 @@ export async function POST(request) {
     const { title, description } = await request.json()
     console.log('title, description from post route', title, description)
     connectMongoDB()
-    const res = await Topic.create({'title': title, 'description': description})
+    const res = await Topic.create({ title, description })
     console.log('post res from api route', res)
 
-    return NextResponse.json({status: 200})    
+    return NextResponse.json({status: 201})    
+}
+
+
+export async function DELETE(request) {
+    const { id } = await request.json()
+    connectMongoDB()
+    console.log('id from delete route', id)
+    await Topic.findByIdAndDelete({ '_id': id})
+
+    return NextResponse.json({status: 200})
 }
