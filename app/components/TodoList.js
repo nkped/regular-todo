@@ -1,10 +1,11 @@
 import { HiPencilAlt } from 'react-icons/hi'
-import { HiOutlineTrash } from 'react-icons/hi'
-import { fetchTopics } from '../lib/fetchTopics'
+import { getTopics } from '../lib/fetchTopics'
+import DeleteBtn from './DeleteBtn'
+
 
 export default async function TodoList() {
 
-    const {topics} = await fetchTopics()
+    const {topics} = await getTopics()
 
     return(
         <>
@@ -12,6 +13,7 @@ export default async function TodoList() {
                 <div key={topic._id}>
                     <h2>{topic.title}</h2>
                     <p>{topic.description}</p>
+                    <DeleteBtn id={topic._id} />
                 </div>
             ))}
         </>

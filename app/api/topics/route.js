@@ -25,8 +25,8 @@ export async function POST(request) {
 
 export async function DELETE(request) {
     const { id } = await request.json()
-    connectMongoDB()
     console.log('id from delete route', id)
+    connectMongoDB()
     await Topic.findByIdAndDelete({ '_id': id})
 
     return NextResponse.json({status: 200})
