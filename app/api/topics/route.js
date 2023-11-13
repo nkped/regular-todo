@@ -24,10 +24,10 @@ export async function POST(request) {
 
 
 export async function DELETE(request) {
-    const { id } = await request.json()
-    console.log('id from delete route', id)
-    connectMongoDB()
-    await Topic.findByIdAndDelete({ '_id': id})
+    const id = request.nextUrl.searchParams.get('id')
+   
+    await connectMongoDB()
+    await Topic.findByIdAndDelete(id)
 
-    return NextResponse.json({status: 200})
+    return NextResponse.json({ message: "Topic deleted" }, { status: 200 });
 }

@@ -20,15 +20,11 @@ export async function createTopic(title, description) {
     return await res.json()
 }
 
-
+/* 
 export async function deleteTopic(id) {
     console.log('id from delete fetch', id)
-    const res = await fetch('http://localhost:3000/api/topics', {
-        method: 'DELETE', 
-        headers: {
-            'Content-Type': 'application/json'
-        }, body: JSON.stringify({id})
+    
+    await fetch(`http://localhost:3000/api/topics?id=${id}`, {
+        method: 'DELETE'
     })
-
-    return await res.json()
-}
+} */
