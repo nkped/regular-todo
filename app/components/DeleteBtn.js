@@ -8,15 +8,13 @@ export default function DeleteBtn({id}) {
     const router = useRouter()
 
     const handleDelete = async() => {
-        console.log('id from handleDelete', id)
         
         const confirmed = confirm('Sure you wish to delete?')
 
         if (confirmed) {
             const res = await fetch(`http://localhost:3000/api/topics?id=${id}`, {
                 method: 'DELETE'
-            }) 
-                
+            })                 
             if (res.ok) {
               router.refresh();
             }}
