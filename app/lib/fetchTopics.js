@@ -20,7 +20,10 @@ export async function createTopic(title, description) {
     return await res.json()
 }
 
-/* 
+
+
+
+/* had to move this to functional component 
 export async function deleteTopic(id) {
     console.log('id from delete fetch', id)
     

@@ -35,7 +35,7 @@ export default function AddTodo() {
                 value={description} 
                 onChange={(e) => setDescription(e.target.value)}
                 />
-            <button className="py-4 mt-3 font-bold text-white bg-green-400 rounded-md border border-green-400 hover:shadow-md" type="submit">Add Todo</button>
+            <button className="py-4 mt-3 font-bold text-white bg-green-400 rounded-md border border-green-500 hover:shadow-md hover:font-extrabold" type="submit">Add Todo</button>
         </form>
     )
 }

@@ -1,7 +1,7 @@
 import { HiPencilAlt } from 'react-icons/hi'
 import { getTopics } from '../lib/fetchTopics'
 import DeleteBtn from './DeleteBtn'
-
+import Link from 'next/link'
 
 export default async function TodoList() {
 
@@ -16,8 +16,8 @@ export default async function TodoList() {
                         <p>{topic.description}</p>
                     </div>
                     <div className='flex items-start'>
-                     <DeleteBtn id={topic._id} />
-                     <HiPencilAlt size={24}/>
+                     <DeleteBtn id={topic._id}/>
+                     <Link href={`http://localhost:3000/edit/${topic._id}`}><HiPencilAlt size={24}/></Link>
                     </div>
                 </div>
             ))}
