@@ -1,20 +1,17 @@
 'use client'
 import { useState } from "react"
 import { useRouter } from "next/navigation"
-import Link from "next/link"
 
 export default function EditTodo({ id, title, description }) {
 
-    const [ newTitle, setNewTitle ] = useState('')
-    const [ newDescription, setNewDescription ] = useState('')
+    const [ newTitle, setNewTitle ] = useState(title)
+    const [ newDescription, setNewDescription ] = useState(description)
     const router = useRouter()
 
-    console.log('id, title, description from EditTodo', id, title, description)
 
     const handleUpdate = async(e) => {
         e.preventDefault()
-        console.log('newTitle, newDescription from EditTodo component', newTitle, newDescription)
-
+        
         try {
             const res = await fetch(`http://localhost:3000/api/topics/${id}`, {
                 method: 'PUT', 
@@ -22,16 +19,18 @@ export default function EditTodo({ id, title, description }) {
                     'Content-Type': 'application/json'
                 }, body: JSON.stringify({newTitle, newDescription})
             })
-            if (res.ok) {
-                console.log('todo was updated')
-                router.push('/')
-                router.refresh()
-            }
+
+            if (!res.ok) throw new Error('Oops, update failed. If problem persist, click "cancel" to return to list of todos, which will be unaffected by attemps to update..')
+            
+            
+            router.push('/')
+            router.refresh()               
+            
         } catch(err) {
-            console.log(err)
+            alert(err)
         }
     }
-
+    
     return (
         <form className="flex flex-col gap-3 px-4" onSubmit={handleUpdate}>
             <input 
@@ -49,8 +48,7 @@ export default function EditTodo({ id, title, description }) {
                 onChange={(e) => setNewDescription(e.target.value)} 
                 />
             <button type="submit" className="py-4 mt-3 font-bold text-white bg-green-400 rounded-md border border-green-500 hover:shadow-md hover:font-extrabold">Update Todo</button>
+            <button href='/' className="py-4 mt-3 font-bold text-white bg-orange-400 rounded-md border border-orange-500 hover:shadow-md hover:font-extrabold">Cancel</button>
         </form>
     )
 }
-
-/* <button href='/' className="py-4 mt-3 font-bold text-white bg-orange-400 rounded-md border border-orange-500 hover:shadow-md hover:font-extrabold">Cancel</button> */
