@@ -1,6 +1,7 @@
 'use client'
 import { useState } from "react"
 import { useRouter } from "next/navigation"
+import { CancelBtn, SubmitBtn } from "./Buttons"
 
 export default function EditTodo({ id, title, description }) {
 
@@ -32,7 +33,7 @@ export default function EditTodo({ id, title, description }) {
     }
     
     return (
-        <form className="flex flex-col gap-3 px-4" onSubmit={handleUpdate}>
+        <form className="flex flex-col gap-5 px-4" onSubmit={handleUpdate}>
             <input 
                 className="px-2 py-4 mt-8 rounded-md border border-slate-300 bg-slate-50 hover:placeholder-slate-300"
                 type="text" 
@@ -47,8 +48,12 @@ export default function EditTodo({ id, title, description }) {
                 value={newDescription} 
                 onChange={(e) => setNewDescription(e.target.value)} 
                 />
-            <button type="submit" className="py-4 mt-3 font-bold text-white bg-green-400 rounded-md border border-green-500 hover:shadow-md hover:font-extrabold">Update Todo</button>
-            <button href='/' className="py-4 mt-3 font-bold text-white bg-orange-400 rounded-md border border-orange-500 hover:shadow-md hover:font-extrabold">Cancel</button>
+            <SubmitBtn />
+            <CancelBtn />
         </form>
     )
 }
+
+/*             <button type="submit" className="py-4 mt-3 font-bold text-white bg-green-400 rounded-md border border-green-500 hover:shadow-md hover:font-extrabold">Update Todo</button>
+            <button href='/' className="py-4 mt-3 font-bold text-white bg-orange-400 rounded-md border border-orange-500 hover:shadow-md hover:font-extrabold">Cancel</button>
+ */

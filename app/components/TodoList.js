@@ -14,9 +14,9 @@ export default async function TodoList() {
     const {topics} = await getTopics()
 
     return(
-        <main className='px-6'>
+        <main className='flex flex-col gap-8 px-6 pt-10'>
             {topics.map((topic) => (
-                <div className='flex justify-between pt-3' key={topic._id}>
+                <div className='flex justify-between pt-3 outline outline-slate-400 outline-e-none' key={topic._id}>
                     <div>
                         <h2>{topic.title}</h2>
                         <p>{topic.description}</p>
@@ -30,3 +30,4 @@ export default async function TodoList() {
         </main>
     )
 }
+/* border border-t-0 border-b-0 border-s-4 border-e-0 border-slate-400 */
