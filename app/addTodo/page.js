@@ -1,7 +1,18 @@
 'use client'
-import { createTopic } from "../lib/fetchTopics";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+
+const createTopic = async(title, description) => {
+    const res = await fetch('http://localhost:3000/api/topics', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        }, body: JSON.stringify({title, description})
+    })
+
+    return await res.json()
+}
+
 
 export default function AddTodo() {
 
@@ -13,8 +24,8 @@ export default function AddTodo() {
     const handleSubmit = async (e) => {
         e.preventDefault()
         createTopic(title, description)
-        router.push('/')
         router.refresh()
+        router.push('/')
     }
 
     //console.log('message from addTodo', res)

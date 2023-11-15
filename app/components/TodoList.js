@@ -1,7 +1,13 @@
 import { HiPencilAlt } from 'react-icons/hi'
-import { getTopics } from '../lib/fetchTopics'
 import DeleteBtn from './DeleteBtn'
 import Link from 'next/link'
+
+const getTopics = async() => {
+    const res = await fetch('http://localhost:3000/api/topics', { next: { revalidate: 0 }})
+    const topics = await res.json()
+
+    return topics
+ }
 
 export default async function TodoList() {
 
