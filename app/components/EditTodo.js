@@ -1,7 +1,7 @@
 'use client'
 import { useState } from "react"
 import { useRouter } from "next/navigation"
-import { CancelBtn, SubmitBtn } from "./Buttons"
+import { CancelBtn, AddBtn } from "./Buttons"
 
 export default function EditTodo({ id, title, description }) {
 
@@ -33,7 +33,7 @@ export default function EditTodo({ id, title, description }) {
     }
     
     return (
-        <form className="flex flex-col gap-5 px-4" onSubmit={handleUpdate}>
+        <form className="flex flex-col gap-3 px-4" onSubmit={handleUpdate}>
             <input 
                 className="px-2 py-4 mt-8 rounded-md border border-slate-300 bg-slate-50 hover:placeholder-slate-300"
                 type="text" 
@@ -48,7 +48,7 @@ export default function EditTodo({ id, title, description }) {
                 value={newDescription} 
                 onChange={(e) => setNewDescription(e.target.value)} 
                 />
-            <SubmitBtn />
+            <AddBtn />
             <CancelBtn />
         </form>
     )
