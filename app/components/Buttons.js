@@ -3,13 +3,13 @@
 export function CancelBtn() {
 
     return(
-        <button className="py-3 m-auto mt-7 mb-2 w-2/5 font-mono font-medium text-gray-100 bg-transparent rounded-full hover:bg-green-500 hover:text-white outline-dashed outline-offset-4 outline-2 hover:outline-offset-0 outline-green-500 hover:font-extrabold">Cancel</button>
+        <button className="py-3 m-auto mt-5 mb-2 w-2/5 font-mono font-medium text-orange-400 bg-transparent rounded-full hover:bg-green-500 hover:text-white outline-dashed outline-offset-4 outline-2 hover:outline-offset-0 outline-green-500 hover:font-extrabold">Cancel</button>
     )
 }
 
 export function AddBtn() {
     return(
-        <button type="submit" className="py-3 m-auto mt-7 mb-2 w-2/5 font-mono font-medium text-gray-100 bg-transparent rounded-full text-md hover:bg-green-500 hover:text-white outline-dashed outline-2 outline-offset-4 outline-green-500 hover:outline-offset-0 hover:font-extrabold">Create</button>
+        <button type="submit" className="py-3 m-auto mt-9 mb-2 w-2/5 font-mono font-medium text-green-500 bg-transparent rounded-full text-md hover:bg-green-500 hover:text-white outline-dashed outline-2 outline-offset-4 outline-green-500 hover:outline-offset-0 hover:font-extrabold">Create</button>
     )
 }
 
