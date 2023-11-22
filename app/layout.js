@@ -13,13 +13,25 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`  bg-green-900 bg-opacity-80 w-screen overflow-y-scroll no-scrollbar ${inter.className}`}>
+      <body className={inter.className}>
+        <div className='bg-green-900 bg-opacity-80'>
+          <Navbar />
+        <div className='max-w-xl'>
+          {children}
+        </div>
+        <Footer />
+        </div>
+      </body>
+    </html>
+  )
+}
+
+/* <html lang="en">
+      <body className={`bg-green-900 bg-opacity-80 w-screen overflow-y-scroll no-scrollbar ${inter.className}`}>
           <Navbar />
         <div className='pb-3 m-auto max-w-xl md:px-2'>
           {children}
         </div>
         <Footer />
       </body>
-    </html>
-  )
-}
+    </html> */
