@@ -1,10 +1,9 @@
 
-
 export default function Footer() {
 
     return(
-        <footer className="">
-            <div className="fixed bottom-0 w-screen border-b-8 border-green-800 border-dashed transparent"></div>
+        <footer className="fixed bottom-0 w-full max-w-xl border-4 border-green-900 border-dashed" >            
+       
         </footer>
     )
 }

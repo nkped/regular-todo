@@ -14,11 +14,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`min-h-screen bg-green-900 bg-opacity-80 ${inter.className}`}>
-        <div className=''>
-          <Navbar />
-        <div className='max-w-xl'>
+        <div className='m-auto max-w-xl'>
+          <Navbar />       
           {children}
-        </div>
         <Footer />
         </div>
       </body>
