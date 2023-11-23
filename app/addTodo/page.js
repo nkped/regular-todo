@@ -38,12 +38,12 @@ export default function AddTodo() {
     }
 
     return(
-        <div className="w-screen h-screen" >
+        <div className="w-full h-full" >
             <main className="h-2/4 border" >
             <form className="flex flex-col px-4 text-gray-100" onSubmit={(e) => handleSubmit(e)}>
             
             <input 
-                className="px-2 py-6 mt-6 font-medium placeholder-gray-200 bg-transparent rounded-lg outline-2 outline-green-500 outline-dashed outline-offset-2 hover:outline-offset-0 hover:placeholder-slate-300"
+                className="px-2 py-6 font-medium placeholder-gray-200 bg-transparent rounded-lg outline-2 outline-green-500 outline-dashed outline-offset-2 hover:outline-offset-0 hover:placeholder-slate-300"
                 type="text" 
                 placeholder="title.." 
                 value={title} 
@@ -58,7 +58,7 @@ export default function AddTodo() {
                 />
                 </form>
             </main>
-            <div className="flex flex-col h-1/3 border" >
+            <div className="flex flex-col /* h-1/3 */ border" >
                 <AddBtn />
                 <CancelBtn />
                 </div>
