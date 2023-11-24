@@ -1,7 +1,7 @@
 'use client'
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import { AddBtn, CancelBtn } from "../../components/Buttons";
+import { AddBtn, CancelBtn } from "../components/Buttons";
 
 export default function AddTodo() {
 

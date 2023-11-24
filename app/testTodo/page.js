@@ -1,7 +1,7 @@
 'use client'
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import { AddBtn, CancelBtn } from "../../components/Buttons";
+import { AddBtn, CancelBtn } from "../components/Buttons";
 
 export default function testTodoPage() {
 
@@ -38,8 +38,8 @@ export default function testTodoPage() {
     }
 
     return(
-        <div className="">
-            <main className="border border-white" >
+        <div className="border border-white">
+        
             <form className="flex flex-col w-full h-full text-gray-100" onSubmit={(e) => handleSubmit(e)}>
             
             <input 
@@ -57,8 +57,7 @@ export default function testTodoPage() {
                 onChange={(e) => setDescription(e.target.value)}
                 />
                 </form>
-            </main>
-            <div className="flex flex-col border" >
+                <div className="flex flex-col gap-6 items-center border" >
                 <AddBtn />
                 <CancelBtn />
                 </div>
