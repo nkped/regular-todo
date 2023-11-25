@@ -1,9 +1,8 @@
 'use client'
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import { AddBtn, CancelBtn } from "../components/Buttons";
 
-export default function AddTodo() {
+export default function testTodoPage() {
 
     const router = useRouter()
     const [ title, setTitle ] = useState('')
@@ -38,32 +37,22 @@ export default function AddTodo() {
     }
 
     return(
-        <div className="w-full h-full" >
-            <main className="h-2/4 border" >
-            <form className="flex flex-col px-4 text-gray-100" onSubmit={(e) => handleSubmit(e)}>
-            
+        <form className="flex overflow-y-scroll flex-col w-full text-gray-100 border border-white h-42 no-scrollbar" onSubmit={(e) => handleSubmit(e)}>            
             <input 
                 className="px-2 py-6 font-medium placeholder-gray-200 bg-transparent rounded-lg outline-2 outline-green-500 outline-dashed outline-offset-2 hover:outline-offset-0 hover:placeholder-slate-300"
                 type="text" 
-                placeholder="title.." 
+                placeholder="testTitle.." 
                 value={title} 
                 onChange={(e) => setTitle(e.target.value)} 
                 />
             <input 
-                className="px-2 py-6 mt-6 font-medium placeholder-gray-200 bg-transparent rounded-lg outline-2 outline-green-500 outline-dashed outline-offset-2 hover:outline-offset-0 hover:placeholder-slate-300"
+                className="px-2 py-6 font-medium placeholder-gray-200 bg-transparent rounded-lg outline-2 outline-green-500 outline-dashed outline-offset-2 hover:outline-offset-0 hover:placeholder-slate-300"
                 type="text" 
-                placeholder="description.." 
+                placeholder="testDescription.." 
                 value={description} 
                 onChange={(e) => setDescription(e.target.value)}
                 />
-                </form>
-            </main>
-            <div className="flex flex-col /* h-1/3 */ border" >
-                <AddBtn />
-                <CancelBtn />
-                </div>
-                </div>
-        
+        </form>        
     )
 }
 

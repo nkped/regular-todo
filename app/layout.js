@@ -13,8 +13,8 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`min-h-screen bg-green-900 bg-opacity-80 ${inter.className}`}>
-        <div className='m-auto max-w-xl'>
+      <body className={`overflow-y-scroll min-h-screen no-scrollbar bg-green-900 bg-opacity-95 ${inter.className}`}>
+        <div className='m-auto max-w-xl h-screen'>
           <Navbar />       
           {children}
           <Footer />

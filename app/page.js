@@ -5,7 +5,7 @@ export default function homePage() {
 
   console.log('this is homepage')
   return(
-    <div>
+    <div className="overflow-y-scroll no-scrollbar">
       <TodoList />
     </div>
   )
