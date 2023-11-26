@@ -2,6 +2,7 @@ import { Inter } from 'next/font/google'
 import './globals.css'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
+import { AddBtn, CancelBtn } from './components/Buttons'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -13,11 +14,26 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`overflow-y-scroll min-h-screen no-scrollbar bg-green-900 bg-opacity-95 ${inter.className}`}>
+      <body className={`overflow-y-scroll h-screen no-scrollbar bg-green-900 bg-opacity-95 ${inter.className}`}>
         <div className='m-auto max-w-xl h-screen'>
-          <Navbar />       
-          {children}
-          <Footer />
+          <div className='fixed top-0 z-10 w-full bg-red-700'>
+              <Navbar />       
+          </div>
+
+          <div className='grid grid-cols-1 grid-flow-row gap-4 h-full bg-yellow-700 grid-rows-10'>           
+            <div className='col-span-1 row-span-4 row-start-3 border'>
+              {children}
+            </div>
+            <div className='col-span-1 row-span-4 row-start-7 border'>
+              <div className='flex flex-col gap-6 items-center' >
+                <AddBtn />
+                <CancelBtn />
+              </div>
+            </div>
+          </div>
+            <div className='fixed bottom-0 z-10 w-full bg-pink-500'>
+                <Footer />        
+            </div>
         </div>
       </body>
     </html>

@@ -37,7 +37,7 @@ export default function testTodoPage() {
     }
 
     return(
-        <form className="flex overflow-y-scroll flex-col w-full text-gray-100 border border-white h-42 no-scrollbar" onSubmit={(e) => handleSubmit(e)}>            
+        <form className="flex flex-col text-gray-100" onSubmit={(e) => handleSubmit(e)}>            
             <input 
                 className="px-2 py-6 font-medium placeholder-gray-200 bg-transparent rounded-lg outline-2 outline-green-500 outline-dashed outline-offset-2 hover:outline-offset-0 hover:placeholder-slate-300"
                 type="text" 
@@ -51,7 +51,7 @@ export default function testTodoPage() {
                 placeholder="testDescription.." 
                 value={description} 
                 onChange={(e) => setDescription(e.target.value)}
-                />
+                />                
         </form>        
     )
 }
