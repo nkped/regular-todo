@@ -17,7 +17,31 @@ export default function RootLayout({ children }) {
       <body className={`overflow-y-scroll h-screen no-scrollbar bg-green-900 bg-opacity-95 ${inter.className}`}>
         <div className='m-auto max-w-xl h-screen border'>
 
-          <div className='grid row-[span_16_/_span_16] h-full border'>
+          <div className='grid grid-flow-row h-full bg-yellow-900 border grid-rows-24 grid-cols-24'>
+
+            <div className='row-start-1 row-end-4 border col-span-24'>
+              <Navbar />
+            </div>
+            <div className='row-start-4 border col-span-24 row-end-15'>{children}</div>
+            <div className='flex flex-col justify-end items-center border col-span-24 row-start-15 row-end-23'>
+          
+                <AddBtn />
+                <CancelBtn />
+          
+            </div>
+            <div className='bg-red-600 col-span-24 row-start-23 row-end-24'>
+            <Footer />
+            </div>
+          </div>
+         </div>
+      </body>
+    </html>
+  )
+}
+
+/* grid-cols-1 grid-rows-6 */
+
+/* <div className='grid row-[span_16_/_span_16] h-full border'>
 
             <div className='col-span-1 row-start-1 row-end-2 border'><Navbar /></div>
             <div className='col-span-1 row-start-2 row-end-4 border'>{children}</div>
@@ -29,20 +53,4 @@ export default function RootLayout({ children }) {
             </div>
           <div className='w-full border'>Footer</div>
           </div>
-         </div>
-      </body>
-    </html>
-  )
-}
-
-/* grid-cols-1 grid-rows-6 */
-
-/* <html lang="en">
-      <body className={`bg-green-900 bg-opacity-80 w-screen overflow-y-scroll no-scrollbar ${inter.className}`}>
-          <Navbar />
-        <div className='pb-3 m-auto max-w-xl md:px-2'>
-          {children}
-        </div>
-        <Footer />
-      </body>
-    </html> */
+         </div> */
