@@ -9,7 +9,7 @@ export const metadata = {
 
 export default function ClientLayout({ children }) {
   return (
-          <div className='grid grid-flow-row h-full bg-yellow-900 border grid-rows-24 grid-cols-24'>
+          <div className='grid grid-flow-row h-screen bg-yellow-900 border grid-rows-24 grid-cols-24'>
 
             <div className='row-start-1 row-end-4 border col-span-24'>
               <Navbar />

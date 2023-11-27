@@ -7,14 +7,14 @@ const getTopics = async() => {
     const topics = await res.json()
 
     return topics
- }
+}
 
 export default async function TodoList() {
 
     const {topics} = await getTopics()
 
     return(
-        <main className='flex flex-col gap-8 px-6 pt-10'>
+        <main className='flex flex-col gap-8'>
             {topics.map((topic) => (
                 <div className='flex justify-between pt-3 outline outline-slate-400 outline-e-none' key={topic._id}>
                     <div>
