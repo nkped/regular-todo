@@ -22,14 +22,12 @@ export default function RootLayout({ children }) {
             <div className='row-start-1 row-end-4 border col-span-24'>
               <Navbar />
             </div>
-            <div className='row-start-4 border col-span-24 row-end-15'>{children}</div>
-            <div className='flex flex-col justify-end items-center border col-span-24 row-start-15 row-end-23'>
-          
-                <AddBtn />
-                <CancelBtn />
-          
+            <div className='flex flex-col row-start-4 justify-center border col-span-24 row-end-15'>{children}</div>
+            <div className='flex flex-col gap-5 justify-end items-center border col-span-24 row-start-15 row-end-23'>
+              <AddBtn />
+              <CancelBtn />          
             </div>
-            <div className='bg-red-600 col-span-24 row-start-23 row-end-24'>
+            <div className='bg-red-600 col-span-24 row-start-24 row-end-25'>
             <Footer />
             </div>
           </div>
