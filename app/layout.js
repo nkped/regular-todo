@@ -16,22 +16,8 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={`overflow-y-scroll h-screen no-scrollbar bg-green-900 bg-opacity-95 ${inter.className}`}>
         <div className='m-auto max-w-xl h-screen border'>
-
-          <div className='grid grid-flow-row h-full bg-yellow-900 border grid-rows-24 grid-cols-24'>
-
-            <div className='row-start-1 row-end-4 border col-span-24'>
-              <Navbar />
-            </div>
-            <div className='flex flex-col row-start-4 justify-center border col-span-24 row-end-15'>{children}</div>
-            <div className='flex flex-col gap-5 justify-end items-center border col-span-24 row-start-15 row-end-23'>
-              <AddBtn />
-              <CancelBtn />          
-            </div>
-            <div className='bg-red-600 col-span-24 row-start-24 row-end-25'>
-            <Footer />
-            </div>
-          </div>
-         </div>
+        {children}
+        </div>         
       </body>
     </html>
   )
