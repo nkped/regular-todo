@@ -39,14 +39,14 @@ export default function testTodoPage() {
     return(
         <form className="flex flex-col gap-5 text-gray-100" onSubmit={(e) => handleSubmit(e)}>            
             <input 
-                className="px-2 py-6 font-medium placeholder-gray-200 bg-transparent rounded-lg outline-2 outline-green-500 outline-dashed outline-offset-2 hover:outline-offset-0 hover:placeholder-slate-300"
+                className="px-2 py-6 font-medium placeholder-gray-200 bg-transparent rounded-lg outline-2 outline-gray-300 outline-dashed outline-offset-2 hover:outline-offset-0 hover:outline-gray-200 hover:placeholder-slate-300"
                 type="text" 
                 placeholder="testTitle.." 
                 value={title} 
                 onChange={(e) => setTitle(e.target.value)} 
                 />
             <input 
-                className="px-2 py-6 font-medium placeholder-gray-200 bg-transparent rounded-lg outline-2 outline-green-500 outline-dashed outline-offset-2 hover:outline-offset-0 hover:placeholder-slate-300"
+                className="px-2 py-6 font-medium placeholder-gray-200 bg-transparent rounded-lg outline-2 outline-gray-300 outline-dashed outline-offset-2 hover:outline-offset-0 hover:outline-gray-200 hover:placeholder-slate-300"
                 type="text" 
                 placeholder="testDescription.." 
                 value={description} 

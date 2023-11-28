@@ -14,12 +14,12 @@ export default async function TodoList() {
     const {topics} = await getTopics()
 
     return(
-        <main className='flex flex-col gap-6'>
+        <main className='flex flex-col gap-9 divide-y divide-green-700'>
             {topics.map((topic) => (
-                <div className='flex justify-between pt-3' key={topic._id}>
+                <div className='flex justify-between pt-6' key={topic._id}>
                     <div className='text-white text-opacity-90'>
                         <h2 className='text-lg'>{topic.title}</h2>
-                        <p className=''>{topic.description}</p>
+                        <p className='text-sm'>{topic.description}</p>
                     </div>
                     <div className='flex items-start'>
                      <DeleteBtn id={topic._id}/>

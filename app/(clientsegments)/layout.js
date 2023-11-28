@@ -11,10 +11,10 @@ export default function ClientLayout({ children }) {
   return (
           <div className='grid grid-flow-row h-screen grid-rows-24 grid-cols-24'>
 
-            <div className='row-start-1 row-end-4 col-span-24'>
+            <div className='col-start-2 row-start-1 row-end-4 col-end-24 col-span-24'>
               <Navbar />
             </div>
-            <div className='flex flex-col row-start-4 justify-center col-span-24 row-end-15'>   {children}
+            <div className='flex flex-col col-start-2 row-start-4 justify-center col-end-24 row-end-15'>   {children}
             </div>
             <div className='flex flex-col gap-5 justify-end items-center col-span-24 row-start-15 row-end-23'>
               <AddBtn />

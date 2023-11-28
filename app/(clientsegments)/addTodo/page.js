@@ -41,14 +41,14 @@ export default function AddTodo() {
         <form className="flex flex-col gap-5 text-gray-100" onSubmit={(e) => handleSubmit(e)}>
             
             <input 
-                className="px-2 py-6 font-medium placeholder-gray-200 bg-transparent rounded-lg outline-gray-300 outline-2 outline-dashed outline-offset-2 hover:outline-offset-0 hover:placeholder-slate-300"
+                className="px-2 py-6 font-medium placeholder-gray-200 bg-transparent rounded-lg outline-gray-300 outline-2 outline-dashed outline-offset-2 hover:outline-offset-0 hover:outline-gray-200 hover:placeholder-slate-300"
                 type="text"
                 placeholder="title.." 
                 value={title} 
                 onChange={(e) => setTitle(e.target.value)} 
                 />
             <input 
-                className="px-2 py-6 font-medium placeholder-gray-200 bg-transparent rounded-lg outline-gray-300 outline-2 outline-dashed outline-offset-2 hover:outline-offset-0 hover:placeholder-slate-300"
+                className="px-2 py-6 font-medium placeholder-gray-200 bg-transparent rounded-lg outline-gray-300 outline-2 outline-dashed outline-offset-2 hover:outline-offset-0 hover:outline-gray-200 first-letter:hover:placeholder-slate-300"
                 type="text" 
                 placeholder="description.." 
                 value={description} 
