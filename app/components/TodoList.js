@@ -17,13 +17,13 @@ export default async function TodoList() {
         <main className='flex flex-col gap-6'>
             {topics.map((topic) => (
                 <div className='flex justify-between pt-3' key={topic._id}>
-                    <div className='text-white'>
-                        <h2>{topic.title}</h2>
-                        <p>{topic.description}</p>
+                    <div className='text-white text-opacity-90'>
+                        <h2 className='text-lg'>{topic.title}</h2>
+                        <p className=''>{topic.description}</p>
                     </div>
                     <div className='flex items-start'>
                      <DeleteBtn id={topic._id}/>
-                     <Link className='text-yellow-500 text-opacity-50' href={`http://localhost:3000/edit/${topic._id}`}><HiPencilAlt size={24}/></Link>
+                     <Link className='text-yellow-500 text-opacity-50 hover:text-yellow-500' href={`http://localhost:3000/edit/${topic._id}`}><HiPencilAlt size={24}/></Link>
                     </div>
                 </div>
             ))}
