@@ -21,6 +21,6 @@ export default function DeleteBtn({id}) {
         }
 
     return(        
-            <button onClick={handleDelete}><HiOutlineTrash size={24}/></button>        
+            <button className='text-red-400 text-opacity-50' onClick={handleDelete}><HiOutlineTrash size={24}/></button>        
     )
 }
