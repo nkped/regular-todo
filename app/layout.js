@@ -14,7 +14,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={`overflow-y-scroll min-h-screen no-scrollbar bg-green-950 bg-opacity-95 ${inter.className}`}>
         <Navbar />
-        <div className='m-auto max-w-xl min-h-screen'>
+        <div className='m-auto max-w-xl min-h-screen bg-fixed pattern-paper pattern-green-950 pattern-bg-transparent pattern-opacity-100 pattern-size-8'>
         {children}
         </div>         
       </body>
@@ -37,3 +37,7 @@ export default function RootLayout({ children }) {
           <div className='w-full border'>Footer</div>
           </div>
          </div> */
+
+
+
+  

@@ -7,12 +7,10 @@ export default function homePage() {
   return(
     <div className='flex flex-col gap-9 px-3 min-h-screen'>     
       <div className=''><TodoList /></div>
-      <div className=""><Footer /></div>      
+      <div className=""><Footer /></div>
     </div>
   )
 }
-
-
 
 /* <div className='flex flex-col gap-9 px-3 min-h-screen'>
       <div className='sticky top-0'><Navbar /></div>      
